@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.configuracion {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.configuracion label {
+    display: block;
+    margin-top: 10px;
+}
+
+.configuracion input {
+    width: 100px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#gruposContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.grupo {
+    flex: 1 1 calc(33.333% - 40px);
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.grupo h3 {
+    margin-bottom: 10px;
+}
+
+.grupo p {
+    margin: 5px 0;
+}
+
+.hombre {
+    color: #FF0000; /* Rojo */
+}
+
+.mujer {
+    color: #800080; /* Morado */
+}

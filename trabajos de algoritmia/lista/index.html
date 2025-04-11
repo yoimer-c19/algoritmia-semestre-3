@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizador de Grupos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Organizador de Grupos</h1>
+        
+        <!-- Botón para cargar archivos -->
+        <input type="file" id="fileInput" accept=".csv">
+        
+        <!-- Configuración de grupos -->
+        <div class="configuracion">
+            <label for="tamanoGrupo">Tamaño del grupo:</label>
+            <input type="number" id="tamanoGrupo" min="2" value="3">
+            
+            <label for="minMujeres">Mínimo de mujeres:</label>
+            <input type="number" id="minMujeres" min="0" value="1">
+            
+            <label for="maxMujeres">Máximo de mujeres:</label>
+            <input type="number" id="maxMujeres" min="0" value="1">
+            
+            <label for="minHombres">Mínimo de hombres:</label>
+            <input type="number" id="minHombres" min="0" value="0">
+            
+            <label for="maxHombres">Máximo de hombres:</label>
+            <input type="number" id="maxHombres" min="0" value="2">
+        </div>
+        
+        <!-- Botón para generar grupos -->
+        <button id="generarGrupos">Generar Grupos</button>
+        
+        <!-- Contenedor para mostrar los grupos -->
+        <div id="gruposContainer"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
