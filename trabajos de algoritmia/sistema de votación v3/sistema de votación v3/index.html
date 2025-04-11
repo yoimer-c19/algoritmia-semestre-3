@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Votación Estudiantil</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sección de Login -->
+    <div id="login-section" class="login-card">
+      <h1>Sistema de Votación</h1>
+      <div class="login-form">
+        <select id="user-type" class="input" onchange="updateUserNames()">
+          <option value="" disabled selected>Selecciona tu rol</option>
+          <option value="estudiante">Estudiante</option>
+          <option value="profesor">Profesor</option>
+        </select>
+        <select id="user-name" class="input" disabled>
+          <option value="" disabled selected>Selecciona tu nombre</option>
+        </select>
+        <input type="password" id="user-code" placeholder="Código de acceso" class="input">
+        <button onclick="login()" class="btn primary">Iniciar Sesión</button>
+        <div class="reset-btns">
+          <button onclick="showResetPrompt()" class="btn reset-btn">Resetear Todo</button>
+          <a href="results.html" target="_blank" class="btn results-btn">Ver Resultados</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección Profesor -->
+    <div id="profesor-section" class="card hidden">
+      <h2>Configuración de Votación</h2>
+      <div class="voting-controls">
+        <button id="start-voting" class="btn primary" onclick="startVoting()">Iniciar Votación</button>
+        <button id="end-voting" class="btn reset-btn" onclick="endVoting()">Finalizar Votación</button>
+        <!-- Botón de modificación agregado -->
+        <button id="modify-candidates" class="btn secondary" onclick="modifyCandidates()">Modificar Candidatos</button>
+      </div>
+      <form id="config-form" onsubmit="guardarConfiguracion(event)">
+        <div id="candidatos-container"></div>
+        <div class="config-btns">
+          <button type="button" class="btn secondary" onclick="addCandidateForm()">Añadir Candidato</button>
+          <button type="submit" class="btn primary">Guardar Configuración</button>
+          <button type="button" class="btn secondary" onclick="showSection('login')">Regresar</button>
+        </div>
+        <div id="config-message" class="config-message"></div>
+      </form>
+    </div>
+
+    <!-- Sección Estudiante -->
+    <div id="estudiante-section" class="card hidden">
+      <h2>Votación Estudiantil</h2>
+      <div id="candidatos-list" class="candidatos-grid"></div>
+  
+    </div>
+  </div>
+
+  <!-- Modal de Autenticación -->
+  <div id="auth-overlay" class="auth-overlay hidden">
+    <div class="auth-modal">
+      <h3>Autenticación Requerida</h3>
+      <input type="text" id="admin-user" placeholder="Usuario administrador" class="auth-input">
+      <input type="password" id="admin-pass" placeholder="Contraseña" class="auth-input">
+      <div class="config-btns">
+        <button onclick="confirmReset()" class="btn primary">Confirmar</button>
+        <button onclick="hideAuthModal()" class="btn secondary">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="users.js"></script>
+  <script src="results.js"></script>
+  <script src="configManager.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

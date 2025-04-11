@@ -1,0 +1,75 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #1e1e2f; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#calculadora {
+    width: 340px; /* Incrementar el ancho */
+    margin: 0 auto;
+    border: 1px solid #444;
+    padding: 40px; /* Incrementar el padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    background-color: #252525; /* Fondo más oscuro */
+}
+
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 25px; /* Incrementar el margen inferior */
+    color: #58a6ff; /* Azul claro */
+}
+
+label {
+    display: block;
+    margin: 15px 0 8px; /* Ajustar márgenes */
+    font-weight: bold;
+    color: #ffffff;
+}
+
+input {
+    width: 100%;
+    padding: 12px; /* Incrementar el padding */
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #ffffff;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #58a6ff;
+    outline: none;
+}
+
+button {
+    background-color: #58a6ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 15px; /* Incrementar el padding */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px; /* Agregar margen superior */
+}
+
+button:hover {
+    background-color: #1f6feb;
+}
+
+#resultado {
+    margin-top: 25px; /* Incrementar el margen superior */
+    font-weight: bold;
+    color: #58a6ff; /* Azul claro */
+}
